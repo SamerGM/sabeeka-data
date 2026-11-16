@@ -1,0 +1,3609 @@
+{
+ "$schema": "../../../../../docs/api/config.schema.json",
+ "version": "2026.11.1",
+ "effectiveFrom": "2026-11-01",
+ "disclaimer": {
+  "en": "Seller making charges, cashback and spreads are SAMPLE values until the live feed reads each seller's official price list. Jewelry making-charge ranges are market averages, not an official tariff.",
+  "ar": "المصنعية والكاش باك وفروق الأسعار للشركات قيم تجريبية حتى تقرأ الخدمة قوائم الأسعار الرسمية. نطاقات مصنعية المشغولات متوسطات سوقية وليست تعريفة رسمية."
+ },
+ "freshness": {
+  "spotMaxAgeSeconds": 60,
+  "localMaxAgeSeconds": 21600
+ },
+ "verification": {
+  "thresholdPct": "0.50"
+ },
+ "zakat": {
+  "nisabGrams24k": "85",
+  "rate": "0.025"
+ },
+ "taxRules": [
+  {
+   "market": "EGYPT",
+   "source": {
+    "en": "Gold Division (FEDCOC) · Egyptian Assay & Weights Authority · Egyptian Tax Authority",
+    "ar": "شعبة الذهب بالاتحاد العام للغرف التجارية · مصلحة الدمغة والموازين · مصلحة الضرائب المصرية"
+   },
+   "jewelryVat": {
+    "rate": "0.14",
+    "base": "MAKING_ONLY"
+   },
+   "bullionVat": {
+    "rate": "0",
+    "base": "MAKING_ONLY",
+    "note": "Brand list prices are published VAT-inclusive."
+   },
+   "investmentGold": null,
+   "stampDutyPerGram": {
+    "24": "9.00",
+    "22": "9.00",
+    "21": "9.00",
+    "18": "9.00"
+   },
+   "stampDutyNote": "SAMPLE — confirm current schedule with the Egyptian Assay & Weights Authority before release.",
+   "defaultDealerDeductionPct": "1.0",
+   "makingRanges": {
+    "LOCAL": {
+     "24": {
+      "min": "60",
+      "max": "130",
+      "default": "90"
+     },
+     "22": {
+      "min": "70",
+      "max": "150",
+      "default": "110"
+     },
+     "21": {
+      "min": "70",
+      "max": "150",
+      "default": "110"
+     },
+     "18": {
+      "min": "80",
+      "max": "170",
+      "default": "120"
+     }
+    },
+    "ITALIAN": {
+     "24": {
+      "min": "180",
+      "max": "350",
+      "default": "250"
+     },
+     "22": {
+      "min": "180",
+      "max": "350",
+      "default": "250"
+     },
+     "21": {
+      "min": "180",
+      "max": "350",
+      "default": "250"
+     },
+     "18": {
+      "min": "200",
+      "max": "400",
+      "default": "280"
+     }
+    }
+   }
+  },
+  {
+   "market": "UAE",
+   "source": {
+    "en": "Dubai Gold & Jewellery Group · UAE Federal Tax Authority",
+    "ar": "مجموعة دبي للذهب والمجوهرات · الهيئة الاتحادية للضرائب"
+   },
+   "jewelryVat": {
+    "rate": "0.05",
+    "base": "GOLD_AND_MAKING"
+   },
+   "bullionVat": {
+    "rate": "0.05",
+    "base": "GOLD_AND_MAKING"
+   },
+   "investmentGold": {
+    "minFineness": "0.99",
+    "zeroRated": true,
+    "note": "Cabinet Decision No. 25 of 2018: investment precious metals ≥99% purity are zero-rated."
+   },
+   "stampDutyPerGram": {},
+   "defaultDealerDeductionPct": "1.0",
+   "makingRanges": {
+    "LOCAL": {
+     "24": {
+      "min": "12",
+      "max": "27",
+      "default": "18"
+     },
+     "22": {
+      "min": "12",
+      "max": "27",
+      "default": "18"
+     },
+     "21": {
+      "min": "12",
+      "max": "27",
+      "default": "18"
+     },
+     "18": {
+      "min": "14",
+      "max": "30",
+      "default": "20"
+     }
+    },
+    "ITALIAN": {
+     "24": {
+      "min": "28",
+      "max": "65",
+      "default": "40"
+     },
+     "22": {
+      "min": "28",
+      "max": "65",
+      "default": "40"
+     },
+     "21": {
+      "min": "28",
+      "max": "65",
+      "default": "40"
+     },
+     "18": {
+      "min": "30",
+      "max": "70",
+      "default": "45"
+     }
+    }
+   }
+  }
+ ],
+ "brands": [
+  {
+   "id": "btc",
+   "name": {
+    "en": "BTC (Bullion Trading Center)",
+    "ar": "بي تي سي"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back its own sealed bars and coins at the Gold Division sell price plus a cashback per gram (original packaging and invoice required). Cashback tiers by weight.",
+    "ar": "تشتري سبائكها وعملاتها المغلقة بسعر البيع المعلن من شعبة الذهب مع كاش باك للجرام (بشرط التغليف الأصلي والفاتورة). الكاش باك حسب الوزن."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "sam-eg",
+   "name": {
+    "en": "SAM Precious Metals",
+    "ar": "سام للمعادن الثمينة"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back its own sealed bars and coins at the Gold Division sell price plus a cashback per gram (original packaging and invoice required). Cashback tiers by weight.",
+    "ar": "تشتري سبائكها وعملاتها المغلقة بسعر البيع المعلن من شعبة الذهب مع كاش باك للجرام (بشرط التغليف الأصلي والفاتورة). الكاش باك حسب الوزن."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "gold-era-eg",
+   "name": {
+    "en": "Gold Era Egypt",
+    "ar": "جولد إيرا مصر"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back its own sealed bars and coins at the Gold Division sell price plus a cashback per gram (original packaging and invoice required). Cashback tiers by weight.",
+    "ar": "تشتري سبائكها وعملاتها المغلقة بسعر البيع المعلن من شعبة الذهب مع كاش باك للجرام (بشرط التغليف الأصلي والفاتورة). الكاش باك حسب الوزن."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "mb-gold",
+   "name": {
+    "en": "MB Gold",
+    "ar": "إم بي جولد"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back its own sealed bars and coins at the Gold Division sell price plus a cashback per gram (original packaging and invoice required). Cashback tiers by weight.",
+    "ar": "تشتري سبائكها وعملاتها المغلقة بسعر البيع المعلن من شعبة الذهب مع كاش باك للجرام (بشرط التغليف الأصلي والفاتورة). الكاش باك حسب الوزن."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "el-galla",
+   "name": {
+    "en": "El Galla Gold",
+    "ar": "الجلا للذهب"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back its own sealed bars and coins at the Gold Division sell price plus a cashback per gram (original packaging and invoice required). Cashback tiers by weight.",
+    "ar": "تشتري سبائكها وعملاتها المغلقة بسعر البيع المعلن من شعبة الذهب مع كاش باك للجرام (بشرط التغليف الأصلي والفاتورة). الكاش باك حسب الوزن."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "swiss-gold",
+   "name": {
+    "en": "Swiss Gold",
+    "ar": "سويس جولد"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back its own sealed bars and coins at the Gold Division sell price plus a cashback per gram (original packaging and invoice required). Cashback tiers by weight.",
+    "ar": "تشتري سبائكها وعملاتها المغلقة بسعر البيع المعلن من شعبة الذهب مع كاش باك للجرام (بشرط التغليف الأصلي والفاتورة). الكاش باك حسب الوزن."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "master-gold",
+   "name": {
+    "en": "Master Gold",
+    "ar": "ماستر جولد"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back its own sealed bars and coins at the Gold Division sell price plus a cashback per gram (original packaging and invoice required). Cashback tiers by weight.",
+    "ar": "تشتري سبائكها وعملاتها المغلقة بسعر البيع المعلن من شعبة الذهب مع كاش باك للجرام (بشرط التغليف الأصلي والفاتورة). الكاش باك حسب الوزن."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "emirates-gold",
+   "name": {
+    "en": "Emirates Gold",
+    "ar": "الإمارات للذهب"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.0%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.0%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "al-etihad",
+   "name": {
+    "en": "Al Etihad Gold",
+    "ar": "الاتحاد للذهب"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.0%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.0%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "sam-ae",
+   "name": {
+    "en": "SAM Precious Metals UAE",
+    "ar": "سام للمعادن الثمينة - الإمارات"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.2",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.2%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.2%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "gold-era-ae",
+   "name": {
+    "en": "Gold Era UAE",
+    "ar": "جولد إيرا الإمارات"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.5",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.5%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.5%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "pamp",
+   "name": {
+    "en": "PAMP Suisse (UAE distributed)",
+    "ar": "بامب سويس (موزع في الإمارات)"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.5",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.5%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.5%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "valcambi",
+   "name": {
+    "en": "Valcambi Suisse (UAE distributed)",
+    "ar": "فالكامبي سويس (موزع في الإمارات)"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.5",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.5%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.5%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  },
+  {
+   "id": "emirates-minting",
+   "name": {
+    "en": "Emirates Minting Factory",
+    "ar": "مصنع الإمارات لسك العملات"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.2",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.2%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.2%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Figures are sample values until the live feed reads this seller's official price list.",
+    "ar": "الأرقام تجريبية حتى تقرأ الخدمة قائمة الأسعار الرسمية لهذه الشركة."
+   }
+  }
+ ],
+ "products": [
+  {
+   "sku": "btc-ingot-1",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "185",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-2.5",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "150",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-5",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "120",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-10",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "95",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-15.55",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "85",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-20",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "80",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-31.1",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "70",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-50",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "60",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-100",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "50",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "btc-ingot-250",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "42",
+   "cashbackPerGram": "12"
+  },
+  {
+   "sku": "btc-ingot-500",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "36",
+   "cashbackPerGram": "12"
+  },
+  {
+   "sku": "btc-ingot-1000",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "31.5",
+   "cashbackPerGram": "12"
+  },
+  {
+   "sku": "btc-coin-2",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "2",
+   "name": {
+    "en": "Quarter Gold Pound (2 g)",
+    "ar": "ربع جنيه ذهب (2 جم)"
+   },
+   "makingPerGram": "95",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "btc-coin-4",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "4",
+   "name": {
+    "en": "Half Gold Pound (4 g)",
+    "ar": "نصف جنيه ذهب (4 جم)"
+   },
+   "makingPerGram": "80",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "btc-coin-8",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "8",
+   "name": {
+    "en": "Gold Pound (8 g)",
+    "ar": "جنيه ذهب (8 جم)"
+   },
+   "makingPerGram": "65",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "btc-coin-40",
+   "brandId": "btc",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "40",
+   "name": {
+    "en": "5 Gold Pounds (40 g)",
+    "ar": "خمسة جنيهات ذهب (40 جم)"
+   },
+   "makingPerGram": "55",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "sam-eg-ingot-1",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "190",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-2.5",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "155",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-5",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "125",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-10",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "100",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-15.55",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "90",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-20",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "85",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-31.1",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "75",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-50",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "65",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-100",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "55",
+   "cashbackPerGram": "28"
+  },
+  {
+   "sku": "sam-eg-ingot-250",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "47",
+   "cashbackPerGram": "12"
+  },
+  {
+   "sku": "sam-eg-ingot-500",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "41",
+   "cashbackPerGram": "12"
+  },
+  {
+   "sku": "sam-eg-ingot-1000",
+   "brandId": "sam-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "36.5",
+   "cashbackPerGram": "12"
+  },
+  {
+   "sku": "gold-era-eg-ingot-1",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "182",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-2.5",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "147",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-5",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "117",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-10",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "92",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-15.55",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "82",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-20",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "77",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-31.1",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "67",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-50",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "57",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-100",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "47",
+   "cashbackPerGram": "26"
+  },
+  {
+   "sku": "gold-era-eg-ingot-250",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "39",
+   "cashbackPerGram": "10"
+  },
+  {
+   "sku": "gold-era-eg-ingot-500",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "33",
+   "cashbackPerGram": "10"
+  },
+  {
+   "sku": "gold-era-eg-ingot-1000",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "28.5",
+   "cashbackPerGram": "10"
+  },
+  {
+   "sku": "gold-era-eg-coin-2",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "2",
+   "name": {
+    "en": "Quarter Gold Pound (2 g)",
+    "ar": "ربع جنيه ذهب (2 جم)"
+   },
+   "makingPerGram": "92",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "gold-era-eg-coin-4",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "4",
+   "name": {
+    "en": "Half Gold Pound (4 g)",
+    "ar": "نصف جنيه ذهب (4 جم)"
+   },
+   "makingPerGram": "77",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "gold-era-eg-coin-8",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "8",
+   "name": {
+    "en": "Gold Pound (8 g)",
+    "ar": "جنيه ذهب (8 جم)"
+   },
+   "makingPerGram": "62",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "gold-era-eg-coin-40",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "40",
+   "name": {
+    "en": "5 Gold Pounds (40 g)",
+    "ar": "خمسة جنيهات ذهب (40 جم)"
+   },
+   "makingPerGram": "52",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "mb-gold-ingot-1",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "187",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-2.5",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "152",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-5",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "122",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-10",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "97",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-15.55",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "87",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-20",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "82",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-31.1",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "72",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-50",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "62",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-100",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "52",
+   "cashbackPerGram": "25"
+  },
+  {
+   "sku": "mb-gold-ingot-250",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "44",
+   "cashbackPerGram": "9"
+  },
+  {
+   "sku": "mb-gold-ingot-500",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "38",
+   "cashbackPerGram": "9"
+  },
+  {
+   "sku": "mb-gold-ingot-1000",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "33.5",
+   "cashbackPerGram": "9"
+  },
+  {
+   "sku": "mb-gold-coin-2",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "2",
+   "name": {
+    "en": "Quarter Gold Pound (2 g)",
+    "ar": "ربع جنيه ذهب (2 جم)"
+   },
+   "makingPerGram": "97",
+   "cashbackPerGram": "22"
+  },
+  {
+   "sku": "mb-gold-coin-4",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "4",
+   "name": {
+    "en": "Half Gold Pound (4 g)",
+    "ar": "نصف جنيه ذهب (4 جم)"
+   },
+   "makingPerGram": "82",
+   "cashbackPerGram": "22"
+  },
+  {
+   "sku": "mb-gold-coin-8",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "8",
+   "name": {
+    "en": "Gold Pound (8 g)",
+    "ar": "جنيه ذهب (8 جم)"
+   },
+   "makingPerGram": "67",
+   "cashbackPerGram": "22"
+  },
+  {
+   "sku": "mb-gold-coin-40",
+   "brandId": "mb-gold",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "40",
+   "name": {
+    "en": "5 Gold Pounds (40 g)",
+    "ar": "خمسة جنيهات ذهب (40 جم)"
+   },
+   "makingPerGram": "57",
+   "cashbackPerGram": "22"
+  },
+  {
+   "sku": "el-galla-ingot-1",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "180",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-2.5",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "145",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-5",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "115",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-10",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "90",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-15.55",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "80",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-20",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "75",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-31.1",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "65",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-50",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "55",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-100",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "45",
+   "cashbackPerGram": "23"
+  },
+  {
+   "sku": "el-galla-ingot-250",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "37",
+   "cashbackPerGram": "7"
+  },
+  {
+   "sku": "el-galla-ingot-500",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "31",
+   "cashbackPerGram": "7"
+  },
+  {
+   "sku": "el-galla-ingot-1000",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "26.5",
+   "cashbackPerGram": "7"
+  },
+  {
+   "sku": "el-galla-coin-2",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "2",
+   "name": {
+    "en": "Quarter Gold Pound (2 g)",
+    "ar": "ربع جنيه ذهب (2 جم)"
+   },
+   "makingPerGram": "90",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "el-galla-coin-4",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "4",
+   "name": {
+    "en": "Half Gold Pound (4 g)",
+    "ar": "نصف جنيه ذهب (4 جم)"
+   },
+   "makingPerGram": "75",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "el-galla-coin-8",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "8",
+   "name": {
+    "en": "Gold Pound (8 g)",
+    "ar": "جنيه ذهب (8 جم)"
+   },
+   "makingPerGram": "60",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "el-galla-coin-40",
+   "brandId": "el-galla",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "40",
+   "name": {
+    "en": "5 Gold Pounds (40 g)",
+    "ar": "خمسة جنيهات ذهب (40 جم)"
+   },
+   "makingPerGram": "50",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "swiss-gold-ingot-1",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "189",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-2.5",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "154",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-5",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "124",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-10",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "99",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-15.55",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "89",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-20",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "84",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-31.1",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "74",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-50",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "64",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-100",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "54",
+   "cashbackPerGram": "24"
+  },
+  {
+   "sku": "swiss-gold-ingot-250",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "46",
+   "cashbackPerGram": "8"
+  },
+  {
+   "sku": "swiss-gold-ingot-500",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "40",
+   "cashbackPerGram": "8"
+  },
+  {
+   "sku": "swiss-gold-ingot-1000",
+   "brandId": "swiss-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "35.5",
+   "cashbackPerGram": "8"
+  },
+  {
+   "sku": "master-gold-ingot-1",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "183",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-2.5",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "148",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-5",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "118",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-10",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "93",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-15.55",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "83",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-20",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "78",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-31.1",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "68",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-50",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "58",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-100",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "48",
+   "cashbackPerGram": "20"
+  },
+  {
+   "sku": "master-gold-ingot-250",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "40",
+   "cashbackPerGram": "4"
+  },
+  {
+   "sku": "master-gold-ingot-500",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "34",
+   "cashbackPerGram": "4"
+  },
+  {
+   "sku": "master-gold-ingot-1000",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "29.5",
+   "cashbackPerGram": "4"
+  },
+  {
+   "sku": "master-gold-coin-2",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "2",
+   "name": {
+    "en": "Quarter Gold Pound (2 g)",
+    "ar": "ربع جنيه ذهب (2 جم)"
+   },
+   "makingPerGram": "93",
+   "cashbackPerGram": "17"
+  },
+  {
+   "sku": "master-gold-coin-4",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "4",
+   "name": {
+    "en": "Half Gold Pound (4 g)",
+    "ar": "نصف جنيه ذهب (4 جم)"
+   },
+   "makingPerGram": "78",
+   "cashbackPerGram": "17"
+  },
+  {
+   "sku": "master-gold-coin-8",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "8",
+   "name": {
+    "en": "Gold Pound (8 g)",
+    "ar": "جنيه ذهب (8 جم)"
+   },
+   "makingPerGram": "63",
+   "cashbackPerGram": "17"
+  },
+  {
+   "sku": "master-gold-coin-40",
+   "brandId": "master-gold",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "40",
+   "name": {
+    "en": "5 Gold Pounds (40 g)",
+    "ar": "خمسة جنيهات ذهب (40 جم)"
+   },
+   "makingPerGram": "53",
+   "cashbackPerGram": "17"
+  },
+  {
+   "sku": "emirates-gold-ingot-1",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "33.25",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-2.5",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "26.60",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-5",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "20.90",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-10",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "13.30",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-15.55",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "11.40",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-20",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "10.45",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-31.1",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "8.55",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-50",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "7.60",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-100",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "6.18",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-250",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "5.22",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-500",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "4.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-1000",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "3.80",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-1",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "24K Gold Coin 1 g",
+    "ar": "عملة ذهب عيار 24 · 1 جم"
+   },
+   "makingPerGram": "43.22",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-2.5",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "24K Gold Coin 2.5 g",
+    "ar": "عملة ذهب عيار 24 · 2.5 جم"
+   },
+   "makingPerGram": "34.58",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-5",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "24K Gold Coin 5 g",
+    "ar": "عملة ذهب عيار 24 · 5 جم"
+   },
+   "makingPerGram": "27.17",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-8",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "8",
+   "name": {
+    "en": "24K Gold Coin 8 g",
+    "ar": "عملة ذهب عيار 24 · 8 جم"
+   },
+   "makingPerGram": "37.05",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-10",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "24K Gold Coin 10 g",
+    "ar": "عملة ذهب عيار 24 · 10 جم"
+   },
+   "makingPerGram": "17.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-31.1",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "24K Gold Coin 1 oz",
+    "ar": "عملة ذهب عيار 24 · 1 أونصة"
+   },
+   "makingPerGram": "11.12",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-1",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "29.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-2.5",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "23.80",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-5",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "18.70",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-10",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "11.90",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-15.55",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "10.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-20",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "9.35",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-31.1",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "7.65",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-50",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "6.80",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-100",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "5.52",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-250",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "4.68",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-500",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "4.25",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "al-etihad-ingot-1000",
+   "brandId": "al-etihad",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "3.40",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-1",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "28.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-2.5",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "22.40",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-5",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "17.60",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-10",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "11.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-15.55",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "9.60",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-20",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "8.80",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-31.1",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "7.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-50",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "6.40",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-100",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "5.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-250",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "4.40",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-500",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "4.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "sam-ae-ingot-1000",
+   "brandId": "sam-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "3.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-1",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "35.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-2.5",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "28.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-5",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "22.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-10",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "14.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-15.55",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "12.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-20",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "11.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-31.1",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "9.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-50",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "8.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-100",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "6.50",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-250",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "5.50",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-500",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "5.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-ingot-1000",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "4.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-coin-1",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "24K Gold Coin 1 g",
+    "ar": "عملة ذهب عيار 24 · 1 جم"
+   },
+   "makingPerGram": "45.50",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-coin-2.5",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "24K Gold Coin 2.5 g",
+    "ar": "عملة ذهب عيار 24 · 2.5 جم"
+   },
+   "makingPerGram": "36.40",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-coin-5",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "24K Gold Coin 5 g",
+    "ar": "عملة ذهب عيار 24 · 5 جم"
+   },
+   "makingPerGram": "28.60",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-coin-8",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "8",
+   "name": {
+    "en": "24K Gold Coin 8 g",
+    "ar": "عملة ذهب عيار 24 · 8 جم"
+   },
+   "makingPerGram": "39.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-coin-10",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "24K Gold Coin 10 g",
+    "ar": "عملة ذهب عيار 24 · 10 جم"
+   },
+   "makingPerGram": "18.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-ae-coin-31.1",
+   "brandId": "gold-era-ae",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "24K Gold Coin 1 oz",
+    "ar": "عملة ذهب عيار 24 · 1 أونصة"
+   },
+   "makingPerGram": "11.70",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-1",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "43.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-2.5",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "35.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-5",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "27.50",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-10",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "17.50",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-15.55",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "15.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-20",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "13.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-31.1",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "11.25",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-50",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "10.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-100",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "8.12",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-250",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "6.88",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-500",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "6.25",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-1000",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "5.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-coin-1",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "24K Gold Coin 1 g",
+    "ar": "عملة ذهب عيار 24 · 1 جم"
+   },
+   "makingPerGram": "56.88",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-coin-2.5",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "24K Gold Coin 2.5 g",
+    "ar": "عملة ذهب عيار 24 · 2.5 جم"
+   },
+   "makingPerGram": "45.50",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-coin-5",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "24K Gold Coin 5 g",
+    "ar": "عملة ذهب عيار 24 · 5 جم"
+   },
+   "makingPerGram": "35.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-coin-8",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "8",
+   "name": {
+    "en": "24K Gold Coin 8 g",
+    "ar": "عملة ذهب عيار 24 · 8 جم"
+   },
+   "makingPerGram": "48.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-coin-10",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "24K Gold Coin 10 g",
+    "ar": "عملة ذهب عيار 24 · 10 جم"
+   },
+   "makingPerGram": "22.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-coin-31.1",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "24K Gold Coin 1 oz",
+    "ar": "عملة ذهب عيار 24 · 1 أونصة"
+   },
+   "makingPerGram": "14.62",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-1",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "40.25",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-2.5",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "32.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-5",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "25.30",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-10",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "16.10",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-15.55",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "13.80",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-20",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "12.65",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-31.1",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "10.35",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-50",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "9.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-100",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "7.48",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-250",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "6.32",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-500",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "5.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-1000",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "4.60",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-coin-1",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "24K Gold Coin 1 g",
+    "ar": "عملة ذهب عيار 24 · 1 جم"
+   },
+   "makingPerGram": "52.32",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-coin-2.5",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "24K Gold Coin 2.5 g",
+    "ar": "عملة ذهب عيار 24 · 2.5 جم"
+   },
+   "makingPerGram": "41.86",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-coin-5",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "24K Gold Coin 5 g",
+    "ar": "عملة ذهب عيار 24 · 5 جم"
+   },
+   "makingPerGram": "32.89",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-coin-8",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "8",
+   "name": {
+    "en": "24K Gold Coin 8 g",
+    "ar": "عملة ذهب عيار 24 · 8 جم"
+   },
+   "makingPerGram": "44.85",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-coin-10",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "24K Gold Coin 10 g",
+    "ar": "عملة ذهب عيار 24 · 10 جم"
+   },
+   "makingPerGram": "20.93",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-coin-31.1",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "24K Gold Coin 1 oz",
+    "ar": "عملة ذهب عيار 24 · 1 أونصة"
+   },
+   "makingPerGram": "13.46",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-1",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "1 g Ingot",
+    "ar": "سبيكة 1 جم"
+   },
+   "makingPerGram": "36.75",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-2.5",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "2.5 g Ingot",
+    "ar": "سبيكة 2.5 جم"
+   },
+   "makingPerGram": "29.40",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-5",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "5 g Ingot",
+    "ar": "سبيكة 5 جم"
+   },
+   "makingPerGram": "23.10",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-10",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "10 g Ingot",
+    "ar": "سبيكة 10 جم"
+   },
+   "makingPerGram": "14.70",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-15.55",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "15.55 g · Half Ounce",
+    "ar": "15.55 جم · نصف أونصة"
+   },
+   "makingPerGram": "12.60",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-20",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "20 g Ingot",
+    "ar": "سبيكة 20 جم"
+   },
+   "makingPerGram": "11.55",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-31.1",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "31.1 g · 1 Ounce",
+    "ar": "31.1 جم · أونصة واحدة"
+   },
+   "makingPerGram": "9.45",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-50",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "50 g Ingot",
+    "ar": "سبيكة 50 جم"
+   },
+   "makingPerGram": "8.40",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-100",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "100 g Ingot",
+    "ar": "سبيكة 100 جم"
+   },
+   "makingPerGram": "6.82",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-250",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "250 g Ingot",
+    "ar": "سبيكة 250 جم"
+   },
+   "makingPerGram": "5.78",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-500",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "500 g Ingot",
+    "ar": "سبيكة 500 جم"
+   },
+   "makingPerGram": "5.25",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-ingot-1000",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "1000 g · 1 Kilogram",
+    "ar": "1000 جم · 1 كيلوجرام"
+   },
+   "makingPerGram": "4.20",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-coin-1",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "24K Gold Coin 1 g",
+    "ar": "عملة ذهب عيار 24 · 1 جم"
+   },
+   "makingPerGram": "47.78",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-coin-2.5",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "24K Gold Coin 2.5 g",
+    "ar": "عملة ذهب عيار 24 · 2.5 جم"
+   },
+   "makingPerGram": "38.22",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-coin-5",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "24K Gold Coin 5 g",
+    "ar": "عملة ذهب عيار 24 · 5 جم"
+   },
+   "makingPerGram": "30.03",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-coin-8",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "8",
+   "name": {
+    "en": "24K Gold Coin 8 g",
+    "ar": "عملة ذهب عيار 24 · 8 جم"
+   },
+   "makingPerGram": "40.95",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-coin-10",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "24K Gold Coin 10 g",
+    "ar": "عملة ذهب عيار 24 · 10 جم"
+   },
+   "makingPerGram": "19.11",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-minting-coin-31.1",
+   "brandId": "emirates-minting",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "24K Gold Coin 1 oz",
+    "ar": "عملة ذهب عيار 24 · 1 أونصة"
+   },
+   "makingPerGram": "12.28",
+   "cashbackPerGram": "0"
+  }
+ ]
+}
