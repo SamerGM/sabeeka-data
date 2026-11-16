@@ -1,0 +1,18 @@
+{
+  "version": "2026.11.16-1",
+  "note": "Remote overrides for the Sabeeka app's phone-side readers. Change a url/pattern or set enabled=false to fix a source without a new APK.",
+  "sources": {
+    "spot-gold-api": { "url": "https://api.gold-api.com/price/XAU" },
+    "spot-swissquote": { "url": "https://forex-data-feed.swissquote.com/public-quotes/bboquotes/instrument/XAU/USD" },
+    "cbe": { "url": "https://www.cbe.org.eg/en/economic-research/statistics/cbe-exchange-rates" },
+    "egajtd": { "url": "https://egajtd.com/" },
+    "el-galla": { "url": "https://elgallagold.com/" },
+    "isagha": { "url": "https://market.isagha.com/" },
+    "dgjg": { "url": "https://dubaicityofgold.com/" },
+    "btc": { "url": "https://magento-1205032-5154147.cloudwaysapps.com/graphql" },
+    "gold-era-eg": { "url": "https://gold-era.eg/product-category/" },
+    "mb-gold": { "url": "https://mbgoldshop.com/collections/" },
+    "gold-era-ae": { "url": "https://gold-era.ae/products/" },
+    "igold": { "url": "https://igold.ae/" }
+  }
+}
