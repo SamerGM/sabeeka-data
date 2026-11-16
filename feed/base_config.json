@@ -13,10 +13,6 @@
  "verification": {
   "thresholdPct": "0.50"
  },
- "zakat": {
-  "nisabGrams24k": "85",
-  "rate": "0.025"
- },
  "taxRules": [
   {
    "market": "EGYPT",
