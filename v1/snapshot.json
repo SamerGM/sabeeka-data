@@ -1,0 +1,244 @@
+{
+ "generatedAt": "2026-11-28T13:57:08Z",
+ "spot": {
+  "usdPerOunce": "3650.00",
+  "changeAbs": "0.00",
+  "changePct": "0.00",
+  "source": {
+   "id": "gold-api",
+   "name": "Gold-API · XAU/USD",
+   "nameAr": "Gold-API · الذهب/الدولار",
+   "url": "https://gold-api.com",
+   "publishedAt": "2026-11-28T13:56:56Z",
+   "fetchedAt": "2026-11-28T13:57:08Z"
+  },
+  "verification": {
+   "status": "VERIFIED",
+   "maxDeviationPct": "2.66",
+   "references": [
+    "igold-pure-rate"
+   ]
+  }
+ },
+ "fx": {
+  "usdEgp": "54.8403",
+  "usdAed": "3.6725",
+  "aedEgp": "14.9309",
+  "egyptSource": {
+   "id": "cbe",
+   "name": "Central Bank of Egypt",
+   "nameAr": "البنك المركزي المصري",
+   "url": "https://www.cbe.org.eg",
+   "publishedAt": "2026-11-26T09:00:00Z",
+   "fetchedAt": "2026-11-28T13:57:08Z"
+  },
+  "uaeSource": {
+   "id": "cbuae",
+   "name": "Central Bank of the UAE",
+   "nameAr": "مصرف الإمارات العربية المتحدة المركزي",
+   "url": "https://www.centralbank.ae",
+   "publishedAt": null,
+   "fetchedAt": "2026-11-28T13:57:08Z"
+  }
+ },
+ "boards": [
+  {
+   "market": "EGYPT",
+   "currency": "EGP",
+   "source": {
+    "id": "el-galla",
+    "name": "El Galla Gold (published prices)",
+    "nameAr": "الجلا للذهب (الأسعار المعلنة)",
+    "url": "https://elgallagold.com",
+    "publishedAt": "2026-11-28T11:13:00Z",
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "quotes": [
+    {
+     "karat": 24,
+     "ask": "6639.00",
+     "bid": "6582.00",
+     "changePct": "0.00"
+    },
+    {
+     "karat": 22,
+     "ask": "6081.93",
+     "bid": "6029.71",
+     "changePct": "0.00"
+    },
+    {
+     "karat": 21,
+     "ask": "5810.00",
+     "bid": "5760.00",
+     "changePct": "0.00"
+    },
+    {
+     "karat": 18,
+     "ask": "4979.75",
+     "bid": "4936.99",
+     "changePct": "0.00"
+    }
+   ]
+  },
+  {
+   "market": "UAE",
+   "currency": "AED",
+   "source": {
+    "id": "dgjg",
+    "name": "Dubai Gold & Jewellery Group",
+    "nameAr": "مجموعة دبي للذهب والمجوهرات",
+    "url": "https://dubaicityofgold.com",
+    "publishedAt": "2026-11-28T13:57:08Z",
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "quotes": [
+    {
+     "karat": 24,
+     "ask": "440.25",
+     "bid": "426.62",
+     "changePct": "0.00"
+    },
+    {
+     "karat": 22,
+     "ask": "407.75",
+     "bid": "390.82",
+     "changePct": "0.00"
+    },
+    {
+     "karat": 21,
+     "ask": "391.00",
+     "bid": "373.33",
+     "changePct": "0.00"
+    },
+    {
+     "karat": 18,
+     "ask": "335.00",
+     "bid": "319.99",
+     "changePct": "0.00"
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "source": {
+    "id": "gold-api",
+    "name": "Gold-API · XAU/USD",
+    "nameAr": "Gold-API · الذهب/الدولار",
+    "url": "https://gold-api.com",
+    "publishedAt": "2026-11-28T13:56:56Z",
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "role": "PRIMARY",
+   "health": "HEALTHY",
+   "description": "Live spot (free API, interim until licensed feed)",
+   "descriptionAr": "سعر فوري مباشر (مصدر مجاني مؤقت)",
+   "deviationPct": null
+  },
+  {
+   "source": {
+    "id": "cbe",
+    "name": "Central Bank of Egypt",
+    "nameAr": "البنك المركزي المصري",
+    "url": "https://www.cbe.org.eg",
+    "publishedAt": "2026-11-26T09:00:00Z",
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "role": "OFFICIAL",
+   "health": "HEALTHY",
+   "description": "USD/EGP, AED/EGP official (mid of buy/sell)",
+   "descriptionAr": "أسعار الصرف الرسمية (متوسط الشراء والبيع)",
+   "deviationPct": null
+  },
+  {
+   "source": {
+    "id": "cbuae",
+    "name": "Central Bank of the UAE",
+    "nameAr": "مصرف الإمارات العربية المتحدة المركزي",
+    "url": "https://www.centralbank.ae",
+    "publishedAt": null,
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "role": "OFFICIAL",
+   "health": "HEALTHY",
+   "description": "USD/AED official peg 3.6725",
+   "descriptionAr": "الدولار/الدرهم · الربط الرسمي 3.6725",
+   "deviationPct": "0.00"
+  },
+  {
+   "source": {
+    "id": "egajtd",
+    "name": "Gold Division (egajtd)",
+    "nameAr": "الشعبة العامة للذهب والمجوهرات",
+    "url": "https://egajtd.com",
+    "publishedAt": null,
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "role": "OFFICIAL",
+   "health": "STALE",
+   "description": "Published table disagrees with spot × CBE rate — not used",
+   "descriptionAr": "الجدول المنشور لا يطابق السعر العالمي × سعر الصرف — غير مستخدم",
+   "deviationPct": "24.32"
+  },
+  {
+   "source": {
+    "id": "el-galla",
+    "name": "El Galla Gold (published prices)",
+    "nameAr": "الجلا للذهب (الأسعار المعلنة)",
+    "url": "https://elgallagold.com",
+    "publishedAt": "2026-11-28T11:13:00Z",
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "role": "CROSS_CHECK",
+   "health": "HEALTHY",
+   "description": "Egypt board (Gold Division fallback) · parity check passed",
+   "descriptionAr": "سعر مصر (بديل الشعبة) · مطابق للسعر العالمي",
+   "deviationPct": "3.17"
+  },
+  {
+   "source": {
+    "id": "dgjg",
+    "name": "Dubai Gold & Jewellery Group",
+    "nameAr": "مجموعة دبي للذهب والمجوهرات",
+    "url": "https://dubaicityofgold.com",
+    "publishedAt": "2026-11-28T13:57:08Z",
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "role": "OFFICIAL",
+   "health": "HEALTHY",
+   "description": "UAE suggested retail rates · sell price estimated (DGJG publishes one rate)",
+   "descriptionAr": "أسعار التجزئة المقترحة · سعر الشراء من العميل تقديري",
+   "deviationPct": "2.16"
+  },
+  {
+   "source": {
+    "id": "gold-era-eg",
+    "name": "Gold Era Egypt (price list)",
+    "nameAr": "جولد إيرا مصر (قائمة الأسعار)",
+    "url": "https://gold-era.eg",
+    "publishedAt": null,
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "role": "CROSS_CHECK",
+   "health": "HEALTHY",
+   "description": "18 products read",
+   "descriptionAr": "تمت قراءة 18 منتج",
+   "deviationPct": null
+  },
+  {
+   "source": {
+    "id": "igold",
+    "name": "iGold.ae (licensed UAE dealer)",
+    "nameAr": "آي جولد (تاجر مرخص في الإمارات)",
+    "url": "https://igold.ae",
+    "publishedAt": null,
+    "fetchedAt": "2026-11-28T13:57:08Z"
+   },
+   "role": "CROSS_CHECK",
+   "health": "HEALTHY",
+   "description": "28 bars · pure rate 442.37 AED/g",
+   "descriptionAr": "28 سبيكة · سعر الخالص 442.37 درهم/جم",
+   "deviationPct": null
+  }
+ ]
+}

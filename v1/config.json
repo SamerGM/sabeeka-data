@@ -1,0 +1,1239 @@
+{
+ "$schema": "../../../../../docs/api/config.schema.json",
+ "version": "2026.11.28.1357",
+ "effectiveFrom": "2026-11-28",
+ "disclaimer": {
+  "en": "Seller prices are read from each seller's or licensed dealer's public price list. Sellers without a public list show no figures.",
+  "ar": "أسعار البائعين مقروءة من قوائم الأسعار العامة لكل بائع أو تاجر مرخص. البائعون بدون قائمة عامة لا تظهر لهم أرقام."
+ },
+ "freshness": {
+  "spotMaxAgeSeconds": 60,
+  "localMaxAgeSeconds": 21600
+ },
+ "verification": {
+  "thresholdPct": "0.50"
+ },
+ "taxRules": [
+  {
+   "market": "EGYPT",
+   "source": {
+    "en": "Gold Division (FEDCOC) · Egyptian Assay & Weights Authority · Egyptian Tax Authority",
+    "ar": "شعبة الذهب بالاتحاد العام للغرف التجارية · مصلحة الدمغة والموازين · مصلحة الضرائب المصرية"
+   },
+   "jewelryVat": {
+    "rate": "0.14",
+    "base": "MAKING_ONLY"
+   },
+   "bullionVat": {
+    "rate": "0",
+    "base": "MAKING_ONLY",
+    "note": "Brand list prices are published VAT-inclusive."
+   },
+   "investmentGold": null,
+   "stampDutyPerGram": {
+    "24": "9.00",
+    "22": "9.00",
+    "21": "9.00",
+    "18": "9.00"
+   },
+   "stampDutyNote": "SAMPLE — confirm current schedule with the Egyptian Assay & Weights Authority before release.",
+   "defaultDealerDeductionPct": "1.0",
+   "makingRanges": {
+    "LOCAL": {
+     "24": {
+      "min": "60",
+      "max": "130",
+      "default": "90"
+     },
+     "22": {
+      "min": "70",
+      "max": "150",
+      "default": "110"
+     },
+     "21": {
+      "min": "70",
+      "max": "150",
+      "default": "110"
+     },
+     "18": {
+      "min": "80",
+      "max": "170",
+      "default": "120"
+     }
+    },
+    "ITALIAN": {
+     "24": {
+      "min": "180",
+      "max": "350",
+      "default": "250"
+     },
+     "22": {
+      "min": "180",
+      "max": "350",
+      "default": "250"
+     },
+     "21": {
+      "min": "180",
+      "max": "350",
+      "default": "250"
+     },
+     "18": {
+      "min": "200",
+      "max": "400",
+      "default": "280"
+     }
+    }
+   }
+  },
+  {
+   "market": "UAE",
+   "source": {
+    "en": "Dubai Gold & Jewellery Group · UAE Federal Tax Authority",
+    "ar": "مجموعة دبي للذهب والمجوهرات · الهيئة الاتحادية للضرائب"
+   },
+   "jewelryVat": {
+    "rate": "0.05",
+    "base": "GOLD_AND_MAKING"
+   },
+   "bullionVat": {
+    "rate": "0.05",
+    "base": "GOLD_AND_MAKING"
+   },
+   "investmentGold": {
+    "minFineness": "0.99",
+    "zeroRated": true,
+    "note": "Cabinet Decision No. 25 of 2018: investment precious metals ≥99% purity are zero-rated."
+   },
+   "stampDutyPerGram": {},
+   "defaultDealerDeductionPct": "1.0",
+   "makingRanges": {
+    "LOCAL": {
+     "24": {
+      "min": "12",
+      "max": "27",
+      "default": "18"
+     },
+     "22": {
+      "min": "12",
+      "max": "27",
+      "default": "18"
+     },
+     "21": {
+      "min": "12",
+      "max": "27",
+      "default": "18"
+     },
+     "18": {
+      "min": "14",
+      "max": "30",
+      "default": "20"
+     }
+    },
+    "ITALIAN": {
+     "24": {
+      "min": "28",
+      "max": "65",
+      "default": "40"
+     },
+     "22": {
+      "min": "28",
+      "max": "65",
+      "default": "40"
+     },
+     "21": {
+      "min": "28",
+      "max": "65",
+      "default": "40"
+     },
+     "18": {
+      "min": "30",
+      "max": "70",
+      "default": "45"
+     }
+    }
+   }
+  }
+ ],
+ "brands": [
+  {
+   "id": "btc",
+   "name": {
+    "en": "BTC (Bullion Trading Center)",
+    "ar": "بي تي سي"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": "https://bulliontradingcenter.com/cash-back-policy/",
+   "cashPolicy": {
+    "en": "Official BTC policy: refunds EGP 12/g of the workmanship fee plus the full stamping fee when sold back in the original sealed package; unpacked: EGP 10/g total. Not for wearable/customised items. Hotline 15057.",
+    "ar": "سياسة BTC الرسمية: رد 12 جنيه/جرام من المصنعية مع كامل رسوم الدمغة عند البيع في الغلاف الأصلي المغلق؛ غير المغلق: 10 جنيه/جرام إجمالًا. لا تنطبق على المشغولات والمنتجات المخصصة. 15057."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Cashback policy verified from BTC's website. Its shop price list is not machine-readable yet.",
+    "ar": "سياسة الكاش باك موثقة من موقع BTC. قائمة أسعار المتجر غير قابلة للقراءة الآلية بعد."
+   }
+  },
+  {
+   "id": "sam-eg",
+   "name": {
+    "en": "SAM Precious Metals",
+    "ar": "سام للمعادن الثمينة"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  },
+  {
+   "id": "gold-era-eg",
+   "name": {
+    "en": "Gold Era Egypt",
+    "ar": "جولد إيرا مصر"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": true,
+   "sourceUrl": "https://gold-era.eg/product-category/ingots/",
+   "cashPolicy": {
+    "en": "Cashback/buy-back terms are not published on gold-era.eg — confirm with the seller (hotline 16728).",
+    "ar": "شروط الكاش باك وإعادة الشراء غير منشورة على الموقع — يرجى التأكد من الشركة (16728)."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "Prices read live from gold-era.eg. Making charge = list price ÷ weight − Egypt gram price.",
+    "ar": "الأسعار مقروءة مباشرة من موقع جولد إيرا. المصنعية = سعر القائمة ÷ الوزن − سعر الجرام في مصر."
+   }
+  },
+  {
+   "id": "mb-gold",
+   "name": {
+    "en": "MB Gold",
+    "ar": "إم بي جولد"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  },
+  {
+   "id": "el-galla",
+   "name": {
+    "en": "El Galla Gold",
+    "ar": "الجلا للذهب"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  },
+  {
+   "id": "swiss-gold",
+   "name": {
+    "en": "Swiss Gold",
+    "ar": "سويس جولد"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  },
+  {
+   "id": "master-gold",
+   "name": {
+    "en": "Master Gold",
+    "ar": "ماستر جولد"
+   },
+   "markets": [
+    "EGYPT"
+   ],
+   "basePriceSource": "BOARD_ASK",
+   "websiteUrl": null,
+   "buybackMode": "CASHBACK",
+   "buybackSpreadPct": "0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "Egyptian bullion seller",
+    "ar": "شركة سبائك في مصر"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  },
+  {
+   "id": "emirates-gold",
+   "name": {
+    "en": "Emirates Gold",
+    "ar": "الإمارات للذهب"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.0",
+   "verified": true,
+   "sourceUrl": "https://igold.ae/gold-bars",
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.0%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.0%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Prices read live from iGold.ae (licensed UAE dealer). Premium = list price ÷ weight − pure gold rate.",
+    "ar": "الأسعار مقروءة مباشرة من آي جولد (تاجر مرخص). العلاوة = سعر القائمة ÷ الوزن − سعر الذهب الخالص."
+   }
+  },
+  {
+   "id": "al-etihad",
+   "name": {
+    "en": "Al Etihad Gold",
+    "ar": "الاتحاد للذهب"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.0",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  },
+  {
+   "id": "sam-ae",
+   "name": {
+    "en": "SAM Precious Metals UAE",
+    "ar": "سام للمعادن الثمينة - الإمارات"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.2",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  },
+  {
+   "id": "gold-era-ae",
+   "name": {
+    "en": "Gold Era UAE",
+    "ar": "جولد إيرا الإمارات"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.5",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  },
+  {
+   "id": "pamp",
+   "name": {
+    "en": "PAMP Suisse (UAE distributed)",
+    "ar": "بامب سويس (موزع في الإمارات)"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.5",
+   "verified": true,
+   "sourceUrl": "https://igold.ae/gold-bars",
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.5%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.5%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Prices read live from iGold.ae (licensed UAE dealer). Premium = list price ÷ weight − pure gold rate.",
+    "ar": "الأسعار مقروءة مباشرة من آي جولد (تاجر مرخص). العلاوة = سعر القائمة ÷ الوزن − سعر الذهب الخالص."
+   }
+  },
+  {
+   "id": "valcambi",
+   "name": {
+    "en": "Valcambi Suisse (UAE distributed)",
+    "ar": "فالكامبي سويس (موزع في الإمارات)"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.5",
+   "verified": true,
+   "sourceUrl": "https://igold.ae/gold-bars",
+   "cashPolicy": {
+    "en": "Buys back at the live dealer bid (about spot − 1.5%). The making charge/premium is not refunded. 999.9 bars are VAT-free investment gold.",
+    "ar": "تشتري بسعر شراء التاجر اللحظي (تقريبًا السعر العالمي − 1.5%). المصنعية/العلاوة غير مستردة. سبائك 999.9 معفاة من الضريبة كذهب استثماري."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "Prices read live from iGold.ae (licensed UAE dealer). Premium = list price ÷ weight − pure gold rate.",
+    "ar": "الأسعار مقروءة مباشرة من آي جولد (تاجر مرخص). العلاوة = سعر القائمة ÷ الوزن − سعر الذهب الخالص."
+   }
+  },
+  {
+   "id": "emirates-minting",
+   "name": {
+    "en": "Emirates Minting Factory",
+    "ar": "مصنع الإمارات لسك العملات"
+   },
+   "markets": [
+    "UAE"
+   ],
+   "basePriceSource": "SPOT_PARITY",
+   "websiteUrl": null,
+   "buybackMode": "DEALER_SPREAD",
+   "buybackSpreadPct": "1.2",
+   "verified": false,
+   "sourceUrl": null,
+   "cashPolicy": {
+    "en": "Policy not published online yet.",
+    "ar": "السياسة غير منشورة على الإنترنت بعد."
+   },
+   "accreditation": {
+    "en": "UAE bullion seller / distributor",
+    "ar": "بائع أو موزع سبائك في الإمارات"
+   },
+   "profile": {
+    "en": "No public machine-readable price list found yet — figures hidden rather than guessed.",
+    "ar": "لم يتم العثور على قائمة أسعار عامة بعد — لا نعرض أرقامًا تقديرية."
+   }
+  }
+ ],
+ "products": [
+  {
+   "sku": "gold-era-eg-ingot-0.25",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "0.25",
+   "name": {
+    "en": "Gold 0.25 Gram Ingot",
+    "ar": "Gold 0.25 Gram Ingot"
+   },
+   "makingPerGram": "755.28",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-0.50",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "0.5",
+   "name": {
+    "en": "Gold 0.5 Gram Ingot",
+    "ar": "Gold 0.5 Gram Ingot"
+   },
+   "makingPerGram": "355.28",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-1.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "Gold 1 Gram Ingot",
+    "ar": "Gold 1 Gram Ingot"
+   },
+   "makingPerGram": "170.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-2.50",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.5",
+   "name": {
+    "en": "Gold 2.5 Grams Ingot",
+    "ar": "Gold 2.5 Grams Ingot"
+   },
+   "makingPerGram": "100.28",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-5.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "Gold 5 Gram Ingot",
+    "ar": "Gold 5 Gram Ingot"
+   },
+   "makingPerGram": "72.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-10.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "Gold 10 Gram Ingot",
+    "ar": "Gold 10 Gram Ingot"
+   },
+   "makingPerGram": "70.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-15.55",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "15.55",
+   "name": {
+    "en": "Gold 15.55 Gram Ingot",
+    "ar": "Gold 15.55 Gram Ingot"
+   },
+   "makingPerGram": "67.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-20.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "Gold 20 Gram Ingot",
+    "ar": "Gold 20 Gram Ingot"
+   },
+   "makingPerGram": "65.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-25.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "25",
+   "name": {
+    "en": "Gold 25 Gram Ingot",
+    "ar": "Gold 25 Gram Ingot"
+   },
+   "makingPerGram": "65.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-31.10",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.1",
+   "name": {
+    "en": "Gold Ounce – 31.10 Gram Ingot",
+    "ar": "Gold Ounce – 31.10 Gram Ingot"
+   },
+   "makingPerGram": "65.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-50.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "Gold 50 Gram Ingot",
+    "ar": "Gold 50 Gram Ingot"
+   },
+   "makingPerGram": "61.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-100.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "Gold 100 Gram Ingot",
+    "ar": "Gold 100 Gram Ingot"
+   },
+   "makingPerGram": "59.29",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-250.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "Gold 250 Gram Bar",
+    "ar": "Gold 250 Gram Bar"
+   },
+   "makingPerGram": "25.79",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-500.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "Gold 500 Gram Bar",
+    "ar": "Gold 500 Gram Bar"
+   },
+   "makingPerGram": "23.79",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-ingot-1000.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "Gold 1 KG Bar",
+    "ar": "Gold 1 KG Bar"
+   },
+   "makingPerGram": "21.79",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-coin-8.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "8",
+   "name": {
+    "en": "Gold Pound – 8 gm (Queen Elizabeth)",
+    "ar": "Gold Pound – 8 gm (Queen Elizabeth)"
+   },
+   "makingPerGram": "67.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-coin-4.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "4",
+   "name": {
+    "en": "Half Gold Pound – 4 gm (Queen Elizabeth)",
+    "ar": "Half Gold Pound – 4 gm (Queen Elizabeth)"
+   },
+   "makingPerGram": "70.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "gold-era-eg-coin-2.00",
+   "brandId": "gold-era-eg",
+   "market": "EGYPT",
+   "type": "COIN",
+   "karat": 21,
+   "weightGrams": "2",
+   "name": {
+    "en": "Quarter Gold Pound – 2 gm (Queen Elizabeth)",
+    "ar": "Quarter Gold Pound – 2 gm (Queen Elizabeth)"
+   },
+   "makingPerGram": "75.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-1.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "Emirates 1 Gram Gold Bar",
+    "ar": "Emirates 1 Gram Gold Bar"
+   },
+   "makingPerGram": "36.72",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-1.00",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "Valcambi Suisse 1 Gram Gold Bar",
+    "ar": "Valcambi Suisse 1 Gram Gold Bar"
+   },
+   "makingPerGram": "57.72",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-1.00",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1",
+   "name": {
+    "en": "PAMP 1 Gram Gold Bar",
+    "ar": "PAMP 1 Gram Gold Bar"
+   },
+   "makingPerGram": "59.82",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-2.50",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.50",
+   "name": {
+    "en": "Emirates 2.5 Gram Gold Bar",
+    "ar": "Emirates 2.5 Gram Gold Bar"
+   },
+   "makingPerGram": "17.61",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-2.50",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.50",
+   "name": {
+    "en": "PAMP 2.5 Gram Gold Bar",
+    "ar": "PAMP 2.5 Gram Gold Bar"
+   },
+   "makingPerGram": "27.27",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-2.50",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "2.50",
+   "name": {
+    "en": "Valcambi Suisse 2.5 Gram Gold Bar",
+    "ar": "Valcambi Suisse 2.5 Gram Gold Bar"
+   },
+   "makingPerGram": "27.27",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-5.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "Emirates 5 Gram Gold Bar",
+    "ar": "Emirates 5 Gram Gold Bar"
+   },
+   "makingPerGram": "11.73",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-5.00",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "Valcambi Suisse 5 Gram Gold Bar",
+    "ar": "Valcambi Suisse 5 Gram Gold Bar"
+   },
+   "makingPerGram": "16.77",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-5.00",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "5",
+   "name": {
+    "en": "PAMP 5 Gram Gold Bar",
+    "ar": "PAMP 5 Gram Gold Bar"
+   },
+   "makingPerGram": "18.03",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-10.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "Emirates 10 Gram Gold Bar",
+    "ar": "Emirates 10 Gram Gold Bar"
+   },
+   "makingPerGram": "7.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-10.00",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "Valcambi Suisse 10 Gram Gold Bar",
+    "ar": "Valcambi Suisse 10 Gram Gold Bar"
+   },
+   "makingPerGram": "8.89",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-20.00",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "Valcambi Suisse 20 Gram Gold Bar",
+    "ar": "Valcambi Suisse 20 Gram Gold Bar"
+   },
+   "makingPerGram": "6.27",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-31.10",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.10",
+   "name": {
+    "en": "Emirates 1 Ounce Gold Bar",
+    "ar": "Emirates 1 Ounce Gold Bar"
+   },
+   "makingPerGram": "3.46",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-31.10",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.10",
+   "name": {
+    "en": "Valcambi Suisse 1 Ounce Gold Bar",
+    "ar": "Valcambi Suisse 1 Ounce Gold Bar"
+   },
+   "makingPerGram": "3.70",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-50.00",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "Valcambi Suisse 50 Gram Gold Bar",
+    "ar": "Valcambi Suisse 50 Gram Gold Bar"
+   },
+   "makingPerGram": "3.43",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-100.00",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "Valcambi Suisse 100 Gram Gold Bar",
+    "ar": "Valcambi Suisse 100 Gram Gold Bar"
+   },
+   "makingPerGram": "0.85",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-100.00",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "PAMP 100 Gram Cast Gold Bar",
+    "ar": "PAMP 100 Gram Cast Gold Bar"
+   },
+   "makingPerGram": "1.25",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-1000.00",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "1000",
+   "name": {
+    "en": "PAMP 1000 Gram Cast Gold Bar",
+    "ar": "PAMP 1000 Gram Cast Gold Bar"
+   },
+   "makingPerGram": "0.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-10.00",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "10",
+   "name": {
+    "en": "PAMP 10 Gram Gold Bar",
+    "ar": "PAMP 10 Gram Gold Bar"
+   },
+   "makingPerGram": "9.73",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-20.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "Emirates 20 Gram Gold Bar",
+    "ar": "Emirates 20 Gram Gold Bar"
+   },
+   "makingPerGram": "4.43",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-20.00",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "20",
+   "name": {
+    "en": "PAMP 20 Gram Gold Bar",
+    "ar": "PAMP 20 Gram Gold Bar"
+   },
+   "makingPerGram": "6.11",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-31.10",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "31.10",
+   "name": {
+    "en": "PAMP 1 Ounce Minted Gold Bar",
+    "ar": "PAMP 1 Ounce Minted Gold Bar"
+   },
+   "makingPerGram": "4.03",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-50.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "Emirates 50 Gram Gold Bar",
+    "ar": "Emirates 50 Gram Gold Bar"
+   },
+   "makingPerGram": "1.33",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-50.00",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "50",
+   "name": {
+    "en": "PAMP 50 Gram Cast Gold Bar",
+    "ar": "PAMP 50 Gram Cast Gold Bar"
+   },
+   "makingPerGram": "2.53",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-100.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "100",
+   "name": {
+    "en": "Emirates 100 Gram Gold Bar",
+    "ar": "Emirates 100 Gram Gold Bar"
+   },
+   "makingPerGram": "0.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-ingot-250.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "Emirates 250 Gram Gold Bar",
+    "ar": "Emirates 250 Gram Gold Bar"
+   },
+   "makingPerGram": "0.00",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "valcambi-ingot-250.00",
+   "brandId": "valcambi",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "250",
+   "name": {
+    "en": "Valcambi Suisse 250 Gram Minted Gold Bar",
+    "ar": "Valcambi Suisse 250 Gram Minted Gold Bar"
+   },
+   "makingPerGram": "2.28",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "pamp-ingot-500.00",
+   "brandId": "pamp",
+   "market": "UAE",
+   "type": "INGOT",
+   "karat": 24,
+   "weightGrams": "500",
+   "name": {
+    "en": "PAMP 500 Gram Cast Gold Bar",
+    "ar": "PAMP 500 Gram Cast Gold Bar"
+   },
+   "makingPerGram": "0.81",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-2.50",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "2.50",
+   "name": {
+    "en": "Emirates 2.50 g gold coin",
+    "ar": "عملة ذهب 2.50 جم"
+   },
+   "makingPerGram": "27.27",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-5.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "5.00",
+   "name": {
+    "en": "Emirates 5.00 g gold coin",
+    "ar": "عملة ذهب 5.00 جم"
+   },
+   "makingPerGram": "16.35",
+   "cashbackPerGram": "0"
+  },
+  {
+   "sku": "emirates-gold-coin-10.00",
+   "brandId": "emirates-gold",
+   "market": "UAE",
+   "type": "COIN",
+   "karat": 24,
+   "weightGrams": "10.00",
+   "name": {
+    "en": "Emirates 10.00 g gold coin",
+    "ar": "عملة ذهب 10.00 جم"
+   },
+   "makingPerGram": "12.78",
+   "cashbackPerGram": "0"
+  }
+ ]
+}
